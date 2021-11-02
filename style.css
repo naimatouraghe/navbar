@@ -1,0 +1,106 @@
+:root {
+    --color1: #390a26;
+    --color2: #892243;
+    --color3: #2094d8;
+    --color4: #c4dbed;
+    --color5: #f8efed;
+}
+* {
+    margin: 0; 
+    padding: 0; 
+}
+
+body{
+    background-color: var(--color2);
+    font-family: 'Poppins', sans-serif;
+    
+
+}
+.content{
+    color: var(--color5);
+    transition: 1s;
+    height: 100vh;
+}
+
+h1{
+   text-align: center;
+   text-transform: uppercase;
+   font-size: 4rem; 
+}
+
+p{
+    padding: 2rem 5rem;
+    text-align: justify;
+}
+
+#side-bar{
+    position: absolute;
+    width: 230px;
+    height: 100%;
+    background: var(--color3) ;
+    left: -300px;
+    transition: .5s ease;
+    z-index: 4;
+}
+
+.toggle-button{
+    position: absolute;
+    top: 30px; 
+    left: 310px; 
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+}
+
+.toggle-button span {
+    width: 60px;
+    height: 10px;
+    border-radius: 5px;
+    background: var(--color3);
+    display: block;
+    margin-top: 4px;
+    transition: .5s ease;
+}
+
+li{
+    color: var(--color2);
+    list-style-type: none;
+    font-size: 2.5rem;
+    cursor: pointer;
+    padding-left: 5px;
+}
+
+li:hover{
+    background: var(--color1);
+    color:var(--color4);
+
+}
+
+#side-bar.active {
+    left: 0;
+}
+
+#side-bar.active .toggle-button {
+    top: 2.8rem; 
+    left: 235px;
+}
+
+#side-bar.active span {
+    position:absolute;
+
+}
+#side-bar.active span:nth-child(1){
+    transform: rotate(45deg);
+}
+
+#side-bar.active span:nth-child(2){
+   opacity: 0; 
+}
+#side-bar.active span:nth-child(3){
+    transform: rotate(-45deg);
+}
+
+#side-bar.active ~ .content {
+    opacity: 0.3;
+}
+/*# sourceMappingURL=style.css.map */
